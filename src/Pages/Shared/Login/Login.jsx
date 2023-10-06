@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn, signwithGoogle} = useContext(AuthContext)
 
     const handlelogin = event =>{
         event.preventDefault()
@@ -28,6 +28,25 @@ const Login = () => {
         })
     }
 
+    const handleGoogleSignin = () => {
+        signwithGoogle()
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            })
+            .catch(error => {
+                console.log("error", error.message)
+            })
+            
+    }
+
     return (
         <div>
             <div className="pt-20 pb-20 p-3 bg-base-200 flex justify-center">
@@ -35,14 +54,14 @@ const Login = () => {
                     <div className=" rounded-none md:w-full flex-shrink-0 max-w-sm justify-center">
                         <img src="https://i.ibb.co/wKvm3Cg/logo.png" alt="" />
                         <div className='pt-10'>
-                            <Link className='text-center hover:bg-black hover:border-teal-200 justify-center input flex items-center gap-5 '>
+                            <button onClick={handleGoogleSignin} className='text-center w-full hover:bg-black hover:border-teal-200 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Google </h1>
                                 <a><FaGoogle /></a>
-                            </Link>
-                            <Link className='text-center hover:bg-black hover:border-teal-200 mt-5 justify-center input flex items-center gap-5 '>
+                            </button>
+                            <button className='text-center w-full hover:bg-black hover:border-teal-200 mt-5 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Github </h1>
                                 <a><FaGithub /></a>
-                            </Link>
+                            </button>
                         </div>
 
                         <div className='text-center text-gray-50 my-5'><h1>---------------------------</h1></div> 

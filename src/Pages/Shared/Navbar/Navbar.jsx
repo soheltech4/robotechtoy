@@ -47,16 +47,22 @@ const Navbar = () => {
                                     <label className="pl-16">
                                         <div className="">
                                             <Link><a className="hover:bg-white hover:duration-1000 hover:text-black">
-                                                <FaUserCircle size={35} /></a></Link>
+                                                {user.photoURL ?
+                                                    <img className='w-10 rounded-full' src={user?.photoURL}></img>
+                                                    :
+                                                    <FaUserCircle size={35} />
+                                                }
+                                            </a></Link>
                                         </div>
+
                                     </label>
                                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                         <li>
                                             <a className="justify-between hover:bg-white  hover:duration-1000 hover:text-black">
-                                                Profile
+                                                {user.displayName}
                                             </a>
                                         </li>
-                                        <li><button onClick={handleLogOut} className="hover:bg-white  hover:duration-1000 hover:text-black"> Logout</button></li>
+                                        <li><button onClick={handleLogOut} className="hover:bg-white  hover:duration-1000 hover:text-black">Logout</button></li>
                                     </ul>
                                 </div>
                                 :
