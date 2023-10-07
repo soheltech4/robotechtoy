@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
 
@@ -9,7 +10,15 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logout()
-            .then(() => { })
+            .then(() => { 
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Logout Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            })
             .error(error => console.log(error.message))
     }
 
@@ -24,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed bg-opacity-50 bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,14 +50,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="flex-none gap-2">
-                        <div className="dropdown dropdown-end">
+                        <div className="dropdown flex justify-center dropdown-end">
                             {user ?
                                 <div>
-                                    <label className="pl-16">
+                                    <label className="">
                                         <div className="">
                                             <Link><a className="hover:bg-white hover:duration-1000 hover:text-black">
                                                 {user.photoURL ?
-                                                    <img className='w-10 rounded-full' src={user?.photoURL}></img>
+                                                    <img className='w-8 rounded-full' src={user?.photoURL}></img>
                                                     :
                                                     <FaUserCircle size={35} />
                                                 }
@@ -68,7 +77,7 @@ const Navbar = () => {
                                 :
                                 <label className="pl-16">
                                     <div className="">
-                                        <Link to={"/login"}><a className="hover:bg-white hover:duration-1000 hover:text-black">
+                                        <Link to={"/login"}><a title='Login' className="hover:bg-white hover:duration-1000 hover:text-black">
                                             <FaUserCircle size={30} /></a></Link>
                                     </div>
                                 </label>

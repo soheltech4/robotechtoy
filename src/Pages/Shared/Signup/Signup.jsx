@@ -6,10 +6,9 @@ import Swal from 'sweetalert2';
 
 const Signup = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const { createUser, signwithGoogle } = useContext(AuthContext)
 
-
-    const handleSignup = event =>{
+    const handleSignup = event => {
         event.preventDefault()
         const form = event.target
         const name = form.name.value
@@ -17,17 +16,36 @@ const Signup = () => {
         const password = form.password.value
         console.log(name, email, password)
         createUser(email, password)
-        .then(result => {
-            const logeduser = result.user 
-            console.log(logeduser)
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Signup Successfully',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        })
+            .then(result => {
+                const logeduser = result.user
+                console.log(logeduser)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Signup Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+    }
+
+    const handleGoogleSignin = () => {
+        signwithGoogle()
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+            .catch(error => {
+                console.log("error", error.message)
+            })
+
     }
 
 
@@ -38,14 +56,14 @@ const Signup = () => {
                     <div className=" rounded-none md:w-full flex-shrink-0 max-w-sm justify-center">
                         <img src="https://i.ibb.co/wKvm3Cg/logo.png" alt="" />
                         <div className='pt-10'>
-                            <Link className='text-center hover:bg-black hover:border-teal-200 justify-center input flex items-center gap-5 '>
+                            <button onClick={handleGoogleSignin} className='text-center w-full hover:bg-black hover:border-teal-200 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Google </h1>
                                 <a><FaGoogle /></a>
-                            </Link>
-                            <Link className='text-center hover:bg-black hover:border-teal-200 mt-5 justify-center input flex items-center gap-5 '>
+                            </button>
+                            <button className='text-center w-full hover:bg-black hover:border-teal-200 mt-5 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Github </h1>
                                 <a><FaGithub /></a>
-                            </Link>
+                            </button>
                         </div>
 
                         <div className='text-center text-gray-50 my-5'><h1>---------------------------</h1></div>
