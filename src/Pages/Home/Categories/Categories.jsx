@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Title from '../../../Component/Title/Title';
+import Button from '../../../Component/Button/Button';
 
 const Categories = () => {
     const [products, setProducts] = useState([]);
@@ -56,8 +57,9 @@ const Categories = () => {
                                 <div className="card-body">
                                     <h2 className="card-title">{product?.name}</h2>
                                     <p>Category: {product?.category}</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Learn now!</button>
+                                    <div className="flex justify-between">
+                                        <p>Rating: <span className='text-yellow-500'>{product?.rating}</span></p>
+                                        <Button title={"Add Product"}></Button>
                                     </div>
                                 </div>
                             </div>
@@ -65,6 +67,7 @@ const Categories = () => {
                     </ul>
                 </div>
             </div>
+            <Button title={"SEE All TOYS"} link={"/alltoys"}></Button>
         </>
     );
 };

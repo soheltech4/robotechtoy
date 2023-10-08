@@ -13,7 +13,7 @@ const Banner = () => {
                 <div className='text-center px-5'>
                     <h1 className='text-2xl md:text-4xl font-bold'>We Have Everything You Need</h1>
                     <p className='text-xl md:text-2xl mb-5 mt-2'>Contrary to popular belief, br Lorem Ipsum is popular belief not simply random text popular belief.</p>
-                    <Button title={"SEE MORE"}></Button>
+                    <Button title={"SEE MORE"} link={"/alltoys"}></Button>
                 </div>
             </div>
             <div>

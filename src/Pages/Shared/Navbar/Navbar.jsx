@@ -24,8 +24,8 @@ const Navbar = () => {
 
     const Nav =
         <>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Home</Link></a>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>All Toys</Link></a>
+            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link to="/">Home</Link></a>
+            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link to="/alltoys">All Toys</Link></a>
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>My Toys</Link></a>
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Add A Toy</Link></a>
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Blogs</Link></a>
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar fixed bg-opacity-30 bg-base-100">
+            <div className="navbar fixed bg-opacity-90 bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
