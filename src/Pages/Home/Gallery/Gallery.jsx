@@ -13,6 +13,7 @@ import 'lightgallery/scss/lg-zoom.scss';
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
+import Title from '../../../Component/Title/Title';
 
 
 
@@ -34,13 +35,14 @@ const Gallery = () => {
 
     return (
         <div className="App p-5">
+            <Title title={"Toys Gallery "} subTitle={"Please see more toys"}></Title>
             <LightGallery
-                elementClassNames="custom-wrapper-class grid md:grid-cols-5 gap-5 "
+                elementClassNames="custom-wrapper-class grid md:grid-cols-5 gap-5 justify-center"
                 onBeforeSlide={onBeforeSlide}
             >
                 {
                     images.map(image => <a href={image?.image}>
-                        <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+                        <div className="max-w-xs overflow-hidden bg-cover bg-no-repeat">
                             <img src={image?.image}
                                 className="max-w-xs transition duration-500 ease-in-out hover:scale-110"
                                 alt={image?.name} />

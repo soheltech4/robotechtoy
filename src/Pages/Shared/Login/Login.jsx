@@ -74,7 +74,7 @@ const Login = () => {
                                 <input type="password" name='password' placeholder="password" className="input hover:bg-black hover:border-teal-200  input-bordered" required />
                             </div>
                             <div className="form-control mt-6 ">
-                                <input className="btn border-t-white hover:border-teal-200 bg-white" type="submit" value="Login" />
+                                <input className="btn hover:border-teal-200 " type="submit" value="Login" />
                             </div>
                         </form>
                         <div className='text-center pt-5 '>
