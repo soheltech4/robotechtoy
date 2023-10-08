@@ -1,0 +1,64 @@
+[
+      {
+        "id": 1,
+        "name": "Robo Buddy",
+        "rate": 4.5,
+        "image": "https://i.ibb.co/t3W2fjP/1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Me chatron",
+        "rate": 4.2,
+        "image": "https://i.ibb.co/HC8dWBK/2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "AstroBot",
+        "rate": 4.0,
+        "image": "https://i.ibb.co/1X5VbTs/3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Robo Racer",
+        "rate": 4.6,
+        "image": "https://i.ibb.co/YLRKqd6/4.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Cyber Droid",
+        "rate": 3.8,
+        "image": "https://i.ibb.co/fCq35wv/5.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Toy Tron",
+        "rate": 4.7,
+        "image": "https://i.ibb.co/bK8kcZN/6.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Robo Explorer",
+        "rate": 4.1,
+        "image": "https://i.ibb.co/BNp4T36/7.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Nano Bot",
+        "rate": 4.4,
+        "image": "https://i.ibb.co/jfDxQVz/8.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Robo Gizmo",
+        "rate": 3.9,
+        "image": "https://i.ibb.co/rMzRFN5/9.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Tech Bot",
+        "rate": 4.3,
+        "image": "https://i.ibb.co/1mfb5Ww/10.jpg"
+      }
+]
+
+  

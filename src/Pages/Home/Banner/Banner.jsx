@@ -6,7 +6,7 @@ const Banner = () => {
             <div className='bg-gradient-to-t from-teal-500 pt-20'>
                 <div className='flex justify-center'>
                     <h1><img className='w-96' src="https://i.ibb.co/bgZJrTv/dog.png" alt="" /></h1>
-                    <h1><img className='pt-20' src="https://i.ibb.co/2sqXBYm/Picture.png" alt="" /></h1>
+                    <h1><img className='pt-20 w-96' src="https://i.ibb.co/2sqXBYm/Picture.png" alt="" /></h1>
                     <h1><img className='w-96' src="https://i.ibb.co/3BNR1GN/robot.png" alt="" /></h1>
                 </div>
             </div>
