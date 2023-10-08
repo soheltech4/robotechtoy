@@ -7,12 +7,12 @@ const Banner = () => {
             <div className='bg-gradient-to-t from-teal-500 pt-20'>
                 <div className='flex justify-center'>
                     <h1><img className='w-96' src="https://i.ibb.co/bgZJrTv/dog.png" alt="" /></h1>
-                    <h1><img className='pt-20 w-96' src="https://i.ibb.co/2sqXBYm/Picture.png" alt="" /></h1>
+                    <h1><img className='md:pt-20 md:w-96' src="https://i.ibb.co/2sqXBYm/Picture.png" alt="" /></h1>
                     <h1><img className='w-96' src="https://i.ibb.co/3BNR1GN/robot.png" alt="" /></h1>
                 </div>
-                <div className='text-center'>
+                <div className='text-center px-5'>
                     <h1 className='text-4xl font-bold'>We Have Everything You Need</h1>
-                    <p className='text-2xl mb-5'>Contrary to popular belief, Lorem Ipsum is popular belief not simply random text popular belief.</p>
+                    <p className='text-2xl mb-5 mt-2'>Contrary to popular belief, br Lorem Ipsum is popular belief not simply random text popular belief.</p>
                     <Button title={"SEE MORE"}></Button>
                 </div>
             </div>
