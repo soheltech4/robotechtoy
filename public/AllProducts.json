@@ -3,7 +3,7 @@
         "id": 1,
         "name": "RoboBot 2000",
         "price": 29.99,
-        "image": "https://example.com/robot1.jpg",
+        "image": "https://i.ibb.co/nMNSyq8/Screenshot-2023-10-09-015858.png",
         "description": "The RoboBot 2000 is a fun and educational robot toy for kids. It can dance, sing, and even tell jokes!",
         "rating": 4.5,
         "category": "Educational"
@@ -12,7 +12,7 @@
         "id": 4,
         "name": "TechTurtle",
         "price": 19.99,
-        "image": "https://example.com/robot4.jpg",
+        "image": "https://i.ibb.co/Yc5zHGk/Screenshot-2023-10-09-020116.png",
         "description": "Meet TechTurtle, the adorable robot turtle that teaches kids about programming and coding.",
         "rating": 4.7,
         "category": "Educational"
@@ -21,7 +21,7 @@
         "id": 16,
         "name": "RoboTeaching Assistant",
         "price": 42.99,
-        "image": "https://example.com/robot16.jpg",
+        "image": "https://i.ibb.co/Tb294PL/Screenshot-2023-10-09-015946.png",
         "description": "Get help with homework from the RoboTeaching Assistant! It can answer questions and explain concepts.",
         "rating": 4.8,
         "category": "Educational"
@@ -30,7 +30,7 @@
         "id": 26,
         "name": "MathBot Genius",
         "price": 36.99,
-        "image": "https://example.com/robot26.jpg",
+        "image": "https://i.ibb.co/ZBr4Z1N/Screenshot-2023-10-09-020018.png",
         "description": "MathBot Genius is a mathematical whiz that helps kids learn and practice math skills in a fun way.",
         "rating": 4.6,
         "category": "Educational"
@@ -39,7 +39,7 @@
         "id": 31,
         "name": "Science Explorer Bot",
         "price": 39.99,
-        "image": "https://example.com/robot31.jpg",
+        "image": "https://i.ibb.co/BgxvrMF/Screenshot-2023-10-09-015831.png",
         "description": "Explore the wonders of science with the Science Explorer Bot! It conducts exciting experiments.",
         "rating": 4.4,
         "category": "Educational"
@@ -48,7 +48,7 @@
         "id": 2,
         "name": "Space Explorer Bot",
         "price": 39.99,
-        "image": "https://example.com/robot2.jpg",
+        "image": "https://i.ibb.co/QHb9LvN/Screenshot-2023-10-09-021538.png",
         "description": "Blast off into space with the Space Explorer Bot! It lights up and makes cool space sounds.",
         "rating": 4.2,
         "category": "Sci-Fi"
@@ -57,7 +57,7 @@
         "id": 11,
         "name": "Mars Rover Explorer",
         "price": 45.99,
-        "image": "https://example.com/robot11.jpg",
+        "image": "https://i.ibb.co/PYGFkff/Screenshot-2023-10-09-021559.png",
         "description": "Explore the red planet with the Mars Rover Explorer! It's a replica of the famous Mars rovers.",
         "rating": 4.2,
         "category": "Sci-Fi"
@@ -66,7 +66,7 @@
         "id": 21,
         "name": "AstroBot",
         "price": 34.99,
-        "image": "https://example.com/robot21.jpg",
+        "image": "https://i.ibb.co/VxDpfV0/Screenshot-2023-10-09-021751.png",
         "description": "AstroBot is your space adventure companion! It can explore distant galaxies and stars.",
         "rating": 4.3,
         "category": "Sci-Fi"
@@ -75,7 +75,7 @@
         "id": 22,
         "name": "Galactic Explorer",
         "price": 37.99,
-        "image": "https://example.com/robot22.jpg",
+        "image": "https://i.ibb.co/G74QbpN/Screenshot-2023-10-09-021822.png",
         "description": "Embark on a journey through the cosmos with the Galactic Explorer robot!",
         "rating": 4.1,
         "category": "Sci-Fi"
@@ -84,7 +84,7 @@
         "id": 23,
         "name": "Starship Commander",
         "price": 49.99,
-        "image": "https://example.com/robot23.jpg",
+        "image": "https://i.ibb.co/m5N0yj5/Screenshot-2023-10-09-021648.png",
         "description": "Lead your own starship crew with the Starship Commander robot toy!",
         "rating": 4.5,
         "category": "Sci-Fi"
@@ -93,7 +93,7 @@
         "id": 3,
         "name": "DinoBot",
         "price": 24.99,
-        "image": "https://example.com/robot3.jpg",
+        "image": "https://i.ibb.co/xjKhWPZ/Screenshot-2023-10-09-022631.png",
         "description": "Roar into action with the DinoBot! This robotic dinosaur can walk, roar, and chomp its jaws.",
         "rating": 4.0,
         "category": "Dinosaurs"
@@ -102,7 +102,7 @@
         "id": 12,
         "name": "T-Rex Roar",
         "price": 29.99,
-        "image": "https://example.com/robot12.jpg",
+        "image": "https://i.ibb.co/yhCnDNK/Screenshot-2023-10-09-022613.png",
         "description": "Experience the mighty roar of the T-Rex Roar robot!",
         "rating": 3.9,
         "category": "Dinosaurs"
@@ -111,7 +111,7 @@
         "id": 27,
         "name": "Jurassic Explorer",
         "price": 32.99,
-        "image": "https://example.com/robot27.jpg",
+        "image": "https://i.ibb.co/9q7TdfX/Screenshot-2023-10-09-022502.png",
         "description": "Embark on a prehistoric adventure with the Jurassic Explorer robot!",
         "rating": 4.2,
         "category": "Dinosaurs"
@@ -120,7 +120,7 @@
         "id": 28,
         "name": "RaptorBot",
         "price": 27.99,
-        "image": "https://example.com/robot28.jpg",
+        "image": "https://i.ibb.co/4V0cMXD/Screenshot-2023-10-09-022537.png",
         "description": "Meet the speedy and agile RaptorBot, a dinosaur-inspired robot toy!",
         "rating": 4.1,
         "category": "Dinosaurs"
@@ -129,7 +129,7 @@
         "id": 29,
         "name": "DinoGuardian",
         "price": 35.99,
-        "image": "https://example.com/robot29.jpg",
+        "image": "https://i.ibb.co/R7NxV6q/Screenshot-2023-10-09-022725.png",
         "description": "Protect your room from imaginary threats with the DinoGuardian robot!",
         "rating": 3.8,
         "category": "Dinosaurs"
@@ -138,7 +138,7 @@
         "id": 5,
         "name": "RoboRacer",
         "price": 34.99,
-        "image": "https://example.com/robot5.jpg",
+        "image": "https://i.ibb.co/ydhDVHK/Screenshot-2023-10-09-024155.png",
         "description": "Race against your friends with the lightning-fast RoboRacer! It's equipped with sensors for obstacle avoidance.",
         "rating": 4.3,
         "category": "Racing"
@@ -147,7 +147,7 @@
         "id": 17,
         "name": "TurboSpeed Racer",
         "price": 39.99,
-        "image": "https://example.com/robot17.jpg",
+        "image": "https://i.ibb.co/LgvHhrC/Screenshot-2023-10-09-024110.png",
         "description": "Zoom around the track with the TurboSpeed Racer robot toy!",
         "rating": 4.0,
         "category": "Racing"
@@ -156,7 +156,7 @@
         "id": 30,
         "name": "SpeedsterBot",
         "price": 28.99,
-        "image": "https://example.com/robot30.jpg",
+        "image": "https://i.ibb.co/SddcqB1/Screenshot-2023-10-09-023929.png",
         "description": "Get ready for high-speed adventures with the SpeedsterBot racing robot!",
         "rating": 4.4,
         "category": "Racing"
@@ -165,7 +165,7 @@
         "id": 32,
         "name": "Formula X",
         "price": 45.99,
-        "image": "https://example.com/robot32.jpg",
+        "image": "https://i.ibb.co/sW5pShn/Screenshot-2023-10-09-024219.png",
         "description": "Experience the thrill of Formula X racing with this robotic racer!",
         "rating": 4.2,
         "category": "Racing"
@@ -174,61 +174,16 @@
         "id": 33,
         "name": "Off-Road Adventure Bot",
         "price": 49.99,
-        "image": "https://example.com/robot33.jpg",
+        "image": "https://i.ibb.co/2MF3PWd/Screenshot-2023-10-09-024429.png",
         "description": "Take on off-road challenges with the Off-Road Adventure Bot!",
         "rating": 4.6,
         "category": "Racing"
     },
     {
-        "id": 6,
-        "name": "BotBuilder Kit",
-        "price": 49.99,
-        "image": "https://example.com/robot6.jpg",
-        "description": "Build your own custom robots with the BotBuilder Kit! It includes various components and instructions.",
-        "rating": 4.8,
-        "category": "DIY"
-    },
-    {
-        "id": 18,
-        "name": "CreativeBot",
-        "price": 37.99,
-        "image": "https://example.com/robot18.jpg",
-        "description": "Unleash your creativity with CreativeBot! It's a blank canvas for your robot-building ideas.",
-        "rating": 4.5,
-        "category": "DIY "
-    },
-    {
-        "id": 34,
-        "name": "Inventor's Lab",
-        "price": 41.99,
-        "image": "https://example.com/robot34.jpg",
-        "description": "Experiment and invent with the Inventor's Lab robot kit! Create your own robotic inventions.",
-        "rating": 4.7,
-        "category": "DIY"
-    },
-    {
-        "id": 35,
-        "name": "Build-a-Bot Workshop",
-        "price": 44.99,
-        "image": "https://example.com/robot35.jpg",
-        "description": "Join the Build-a-Bot Workshop and craft your own robot companions from scratch!",
-        "rating": 4.6,
-        "category": "DIY"
-    },
-    {
-        "id": 36,
-        "name": "Maker's Dream Kit",
-        "price": 54.99,
-        "image": "https://example.com/robot36.jpg",
-        "description": "Turn your dreams into reality with the Maker's Dream Kit! It includes advanced components for creative projects.",
-        "rating": 4.9,
-        "category": "DIY"
-    },
-    {
         "id": 7,
         "name": "RoboPet",
         "price": 22.99,
-        "image": "https://example.com/robot7.jpg",
+        "image": "https://i.ibb.co/GC9XzF2/Screenshot-2023-10-09-025322.png",
         "description": "Meet RoboPet, the lovable robotic pet companion! It's great for kids and adults alike.",
         "rating": 4.4,
         "category": "Pets"
@@ -237,7 +192,7 @@
         "id": 19,
         "name": "PandaBot",
         "price": 26.99,
-        "image": "https://example.com/robot19.jpg",
+        "image": "https://i.ibb.co/QnbtG18/Screenshot-2023-10-09-025223.png",
         "description": "PandaBot is the adorable robotic panda that loves to play and interact with its owners.",
         "rating": 4.3,
         "category": "Pets"
@@ -246,7 +201,7 @@
         "id": 37,
         "name": "KittyBot",
         "price": 23.99,
-        "image": "https://example.com/robot37.jpg",
+        "image": "https://i.ibb.co/jVSgGQ6/Screenshot-2023-10-09-025257.png",
         "description": "Enjoy the company of KittyBot, a robotic cat that purrs and responds to your touch!",
         "rating": 4.2,
         "category": "Pets"
@@ -255,7 +210,7 @@
         "id": 38,
         "name": "PuppyPal",
         "price": 27.99,
-        "image": "https://example.com/robot38.jpg",
+        "image": "https://i.ibb.co/WtPXmHM/Screenshot-2023-10-09-024957.png",
         "description": "PuppyPal is the ultimate robotic puppy that loves to fetch and play fetch with you!",
         "rating": 4.1,
         "category": "Pets"
@@ -264,7 +219,7 @@
         "id": 39,
         "name": "PetPlaymate",
         "price": 29.99,
-        "image": "https://example.com/robot39.jpg",
+        "image": "https://i.ibb.co/KFmxcnh/Screenshot-2023-10-09-024907.png",
         "description": "PetPlaymate is your robotic play buddy for your real pets, keeping them entertained for hours.",
         "rating": 4.0,
         "category": "Pets"

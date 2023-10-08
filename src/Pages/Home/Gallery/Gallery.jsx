@@ -34,10 +34,10 @@ const Gallery = () => {
     }, [])
 
     return (
-        <div className="App p-5">
+        <div className="App mb-20">
             <Title title={"Toys Gallery "} subTitle={"Please see more toys"}></Title>
             <LightGallery
-                elementClassNames="custom-wrapper-class grid md:grid-cols-5 gap-5 justify-center"
+                elementClassNames="custom-wrapper-class px-5 grid md:grid-cols-5 gap-5 justify-center"
                 onBeforeSlide={onBeforeSlide}
             >
                 {
