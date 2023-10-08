@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Categories = () => {
     const [products, setProducts] = useState([])
+    const [categories, setCategories] = useState('')
 
     useEffect(() => {
         fetch('AllProducts.json')
@@ -14,20 +15,20 @@ const Categories = () => {
             });
     }, []);
 
+    const handleSubmit = (event) => {
+        const item = event.target.value
+        setCategories(item)
+    }
+
     return (
-        <div>
-            <h1>Unique Categories:</h1>
-            <ul>
+        <div onChange={handleSubmit}>
+            <select className="select select-bordered w-full max-w-xs">
+                <option disabled selected>Who shot first?</option>
                 {products.map((category, index) => (
-                    <li key={index}>{category}
-                        <select className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>Who shot first?</option>
-                            <option>Han Solo</option>
-                            <option>Greedo</option>
-                        </select>
-                    </li>
+                    <option key={index}>{category}</option>
                 ))}
-            </ul>
+            </select>
+            <h1>{categories}</h1>
         </div>
     );
 };
