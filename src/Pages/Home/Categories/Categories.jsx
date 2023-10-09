@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Title from '../../../Component/Title/Title';
 import Button from '../../../Component/Button/Button';
+import StarRatings from 'react-star-ratings';
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
     const [products, setProducts] = useState([]);
@@ -50,21 +52,35 @@ const Categories = () => {
                             </option>
                         ))}
                     </select>
-                    <ul className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
+                    <div className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
                         {filteredProducts.map((product, index) => (
                             <div key={index} className="card w-96 glass">
-                                <figure><img className='' src={product?.image} alt="car!" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">{product?.name}</h2>
-                                    <p>Category: {product?.category}</p>
-                                    <div className="flex justify-between">
-                                        <p>Rating: <span className='text-yellow-500'>{product?.rating}</span></p>
+                                <div className="card w-96 glass">
+                                    <Link>
+                                        <figure><img src={product?.image} className='' alt="car!" /></figure>
+                                        <div className="p-5">
+                                            <div className='flex justify-between'>
+                                                <h2 className="card-title">{product?.name}</h2>
+                                                <div className=''>
+                                                    <StarRatings
+                                                        rating={product?.rating}
+                                                        starDimension="20px"
+                                                        starSpacing="15px"
+                                                        starRatedColor="yellow"
+                                                        starSpacing="2px"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <p className='text-lg'> Price : $<span className='text-yellow-400'>{product?.price}</span></p>
+                                        </div>
+                                    </Link>
+                                    <div className="card-actions justify-end pb-5 pr-3">
                                         <Button title={"Add Product"}></Button>
                                     </div>
                                 </div>
                             </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             </div>
             <Button title={"SEE All TOYS"} link={"/alltoys"}></Button>
