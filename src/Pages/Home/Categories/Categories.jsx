@@ -10,7 +10,7 @@ const Categories = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        fetch('AllProducts.json')
+        fetch('http://localhost:5000/products')
             .then((data) => data.json())
             .then((data) => {
                 const uniqueCategories = Array.from(
@@ -31,7 +31,7 @@ const Categories = () => {
             // If "All categories" is selected, show all products
             setFilteredProducts(products);
         } else {
-            fetch('AllProducts.json')
+            fetch('http://localhost:5000/products')
                 .then((data) => data.json())
                 .then((data) => {
                     const filtered = data.filter((item) => item.category === categories);
@@ -39,6 +39,14 @@ const Categories = () => {
                 });
         }
     }, [categories, products]);
+
+    // const handleSingleData = (id) => {
+    //     if (categories.filter(toy => toy? ._id === id)) {
+    //         console.log("hiii")
+    //     }
+
+    // }
+
 
     return (
         <>
@@ -56,8 +64,8 @@ const Categories = () => {
                         {filteredProducts.map((product, index) => (
                             <div key={index} className="card w-96 glass">
                                 <div className="card w-96 glass">
-                                    <Link>
-                                        <figure><img src={product?.image} className='' alt="car!" /></figure>
+                                    <Link to={`/toydetails/${product?._id}`}>
+                                        <figure><img src={product?.image} className='rounded-t-xl' alt="car!" /></figure>
                                         <div className="p-5">
                                             <div className='flex justify-between'>
                                                 <h2 className="card-title">{product?.name}</h2>

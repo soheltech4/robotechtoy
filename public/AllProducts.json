@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "RoboBot 2000",
         "price": 29.99,
         "image": "https://i.ibb.co/nMNSyq8/Screenshot-2023-10-09-015858.png",
@@ -9,7 +8,6 @@
         "category": "Educational"
     },
     {
-        "id": 4,
         "name": "TechTurtle",
         "price": 19.99,
         "image": "https://i.ibb.co/Yc5zHGk/Screenshot-2023-10-09-020116.png",
@@ -18,7 +16,6 @@
         "category": "Educational"
     },
     {
-        "id": 16,
         "name": "RoboTeaching Assistant",
         "price": 42.99,
         "image": "https://i.ibb.co/Tb294PL/Screenshot-2023-10-09-015946.png",
@@ -27,7 +24,6 @@
         "category": "Educational"
     },
     {
-        "id": 26,
         "name": "MathBot Genius",
         "price": 36.99,
         "image": "https://i.ibb.co/ZBr4Z1N/Screenshot-2023-10-09-020018.png",
@@ -36,7 +32,6 @@
         "category": "Educational"
     },
     {
-        "id": 31,
         "name": "Science Explorer Bot",
         "price": 39.99,
         "image": "https://i.ibb.co/BgxvrMF/Screenshot-2023-10-09-015831.png",
@@ -45,7 +40,6 @@
         "category": "Educational"
     },
     {
-        "id": 2,
         "name": "Space Explorer Bot",
         "price": 39.99,
         "image": "https://i.ibb.co/QHb9LvN/Screenshot-2023-10-09-021538.png",
@@ -54,7 +48,6 @@
         "category": "Sci-Fi"
     },
     {
-        "id": 11,
         "name": "Mars Rover Explorer",
         "price": 45.99,
         "image": "https://i.ibb.co/PYGFkff/Screenshot-2023-10-09-021559.png",
@@ -63,7 +56,6 @@
         "category": "Sci-Fi"
     },
     {
-        "id": 21,
         "name": "AstroBot",
         "price": 34.99,
         "image": "https://i.ibb.co/VxDpfV0/Screenshot-2023-10-09-021751.png",
@@ -72,7 +64,6 @@
         "category": "Sci-Fi"
     },
     {
-        "id": 22,
         "name": "Galactic Explorer",
         "price": 37.99,
         "image": "https://i.ibb.co/G74QbpN/Screenshot-2023-10-09-021822.png",
@@ -81,7 +72,6 @@
         "category": "Sci-Fi"
     },
     {
-        "id": 23,
         "name": "Starship Commander",
         "price": 49.99,
         "image": "https://i.ibb.co/m5N0yj5/Screenshot-2023-10-09-021648.png",
@@ -90,7 +80,6 @@
         "category": "Sci-Fi"
     },
     {
-        "id": 3,
         "name": "DinoBot",
         "price": 24.99,
         "image": "https://i.ibb.co/xjKhWPZ/Screenshot-2023-10-09-022631.png",
@@ -99,7 +88,6 @@
         "category": "Dinosaurs"
     },
     {
-        "id": 12,
         "name": "T-Rex Roar",
         "price": 29.99,
         "image": "https://i.ibb.co/yhCnDNK/Screenshot-2023-10-09-022613.png",
@@ -108,7 +96,6 @@
         "category": "Dinosaurs"
     },
     {
-        "id": 27,
         "name": "Jurassic Explorer",
         "price": 32.99,
         "image": "https://i.ibb.co/9q7TdfX/Screenshot-2023-10-09-022502.png",
@@ -117,7 +104,6 @@
         "category": "Dinosaurs"
     },
     {
-        "id": 28,
         "name": "RaptorBot",
         "price": 27.99,
         "image": "https://i.ibb.co/4V0cMXD/Screenshot-2023-10-09-022537.png",
@@ -126,7 +112,6 @@
         "category": "Dinosaurs"
     },
     {
-        "id": 29,
         "name": "DinoGuardian",
         "price": 35.99,
         "image": "https://i.ibb.co/R7NxV6q/Screenshot-2023-10-09-022725.png",
@@ -135,7 +120,6 @@
         "category": "Dinosaurs"
     },
     {
-        "id": 5,
         "name": "RoboRacer",
         "price": 34.99,
         "image": "https://i.ibb.co/ydhDVHK/Screenshot-2023-10-09-024155.png",
@@ -144,7 +128,6 @@
         "category": "Racing"
     },
     {
-        "id": 17,
         "name": "TurboSpeed Racer",
         "price": 39.99,
         "image": "https://i.ibb.co/LgvHhrC/Screenshot-2023-10-09-024110.png",
@@ -153,7 +136,6 @@
         "category": "Racing"
     },
     {
-        "id": 30,
         "name": "SpeedsterBot",
         "price": 28.99,
         "image": "https://i.ibb.co/SddcqB1/Screenshot-2023-10-09-023929.png",
@@ -162,7 +144,6 @@
         "category": "Racing"
     },
     {
-        "id": 32,
         "name": "Formula X",
         "price": 45.99,
         "image": "https://i.ibb.co/sW5pShn/Screenshot-2023-10-09-024219.png",
@@ -171,7 +152,6 @@
         "category": "Racing"
     },
     {
-        "id": 33,
         "name": "Off-Road Adventure Bot",
         "price": 49.99,
         "image": "https://i.ibb.co/2MF3PWd/Screenshot-2023-10-09-024429.png",
@@ -180,7 +160,6 @@
         "category": "Racing"
     },
     {
-        "id": 7,
         "name": "RoboPet",
         "price": 22.99,
         "image": "https://i.ibb.co/GC9XzF2/Screenshot-2023-10-09-025322.png",
@@ -189,7 +168,6 @@
         "category": "Pets"
     },
     {
-        "id": 19,
         "name": "PandaBot",
         "price": 26.99,
         "image": "https://i.ibb.co/QnbtG18/Screenshot-2023-10-09-025223.png",
@@ -198,7 +176,6 @@
         "category": "Pets"
     },
     {
-        "id": 37,
         "name": "KittyBot",
         "price": 23.99,
         "image": "https://i.ibb.co/jVSgGQ6/Screenshot-2023-10-09-025257.png",
@@ -207,7 +184,6 @@
         "category": "Pets"
     },
     {
-        "id": 38,
         "name": "PuppyPal",
         "price": 27.99,
         "image": "https://i.ibb.co/WtPXmHM/Screenshot-2023-10-09-024957.png",
@@ -216,7 +192,6 @@
         "category": "Pets"
     },
     {
-        "id": 39,
         "name": "PetPlaymate",
         "price": 29.99,
         "image": "https://i.ibb.co/KFmxcnh/Screenshot-2023-10-09-024907.png",

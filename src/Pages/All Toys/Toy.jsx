@@ -4,13 +4,13 @@ import StarRatings from 'react-star-ratings';
 import { Link } from 'react-router-dom';
 
 const Toy = ({ toy }) => {
-    const { id, name, price, image, description, rating, category } = toy
+    const { _id, name, price, image, description, rating, category } = toy
 
     return (
         <div>
             <div className="card w-96 glass">
-                <Link>
-                    <figure><img src={image} className='' alt="car!" /></figure>
+                <Link to={`/toydetails/${_id}`}>
+                    <figure><img src={image} className='rounded-t-xl' alt="car!" /></figure>
                     <div className="p-5">
                         <div className='flex justify-between'>
                             <h2 className="card-title">{name}</h2>
