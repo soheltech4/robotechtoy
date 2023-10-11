@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
@@ -7,25 +7,28 @@ import Swal from 'sweetalert2';
 const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext)
+    const location = useLocation()
 
     const handleLogOut = () => {
         logout()
-            .then(() => { 
+            .then(() => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
                     title: 'Logout Successfully',
                     showConfirmButton: false,
                     timer: 1500
-                  })
+                })
             })
             .error(error => console.log(error.message))
     }
 
     const Nav =
         <>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link to="/">Home</Link></a>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link to="/alltoys">All Toys</Link></a>
+            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>Home</Link>
+
+            <Link to="/alltoys" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/alltoys' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>All Toys</Link>
+            
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>My Toys</Link></a>
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Add A Toy</Link></a>
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Blogs</Link></a>

@@ -1,12 +1,18 @@
 import React, { useContext } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
 
     const {signIn, signwithGoogle} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    console.log(navigate, location)
+
+    const from = location.state?.from?.pathname || "/"
 
     const handlelogin = event =>{
         event.preventDefault()
@@ -25,6 +31,7 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
+            navigate(from, {replace: true})
         })
     }
 
@@ -32,7 +39,6 @@ const Login = () => {
         signwithGoogle()
             .then(result => {
                 const user = result.user
-                console.log(user)
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
@@ -40,6 +46,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
+                  navigate(from, {replace: true})
             })
             .catch(error => {
                 console.log("error", error.message)

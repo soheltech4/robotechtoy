@@ -28,7 +28,7 @@ const Toy = ({ toy }) => {
                     </div>
                 </Link>
                 <div className="card-actions justify-end pb-5 pr-3">
-                    <Button title={"Add Product"}></Button>
+                    <Button title={"Add Product"} toy={toy}></Button>
                 </div>
             </div>
         </div>
