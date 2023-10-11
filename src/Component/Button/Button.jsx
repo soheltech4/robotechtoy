@@ -1,22 +1,35 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, json, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
-import PrivateRoute from '../../Routes/PrivateRoute';
+import useCart from '../../Hooks/useCart';
+
 
 const Button = ({ title, toy, link }) => {
-
+    const {_id, name, price, image, description, rating, category} = toy
     const { user } = useContext(AuthContext)
+    const [cart, refetch] = useCart()
     const navigate = useNavigate()
+
+
+
 
     const handleAddProduct = toy => {
         console.log(user, toy)
         if (user) {
-            fetch('http://localhost:5000/carts')
+            const toyItem = {toyId: _id, name, price, image, description, rating, category, email: user?.email }
+            fetch('http://localhost:5000/carts', {
+                method :'POST',
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify(toyItem)
+            })
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
+                        refetch()
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -37,7 +50,7 @@ const Button = ({ title, toy, link }) => {
                 confirmButtonText: 'Login Now'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login')
+                    navigate('/login', {state: {from: location}})
                 }
             })
         }

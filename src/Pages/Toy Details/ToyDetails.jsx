@@ -40,7 +40,7 @@ const ToyDetails = () => {
                                 </button>
                             </div>
                             <div className="card-actions md:pr-3">
-                                <Button title={"Add Product"}></Button>
+                                <Button title={"Add Product"} toy={toy}></Button>
                             </div>
                         </div>
                     </div>

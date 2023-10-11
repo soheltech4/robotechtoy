@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaShoppingCart, FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useCart from '../../../Hooks/useCart';
 
 const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext)
     const location = useLocation()
+    const [cart] = useCart()
 
     const handleLogOut = () => {
         logout()
@@ -28,10 +30,9 @@ const Navbar = () => {
             <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>Home</Link>
 
             <Link to="/alltoys" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/alltoys' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>All Toys</Link>
-            
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>My Toys</Link></a>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Add A Toy</Link></a>
+
             <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Blogs</Link></a>
+            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Contact</Link></a>
         </>
 
     return (
@@ -52,8 +53,21 @@ const Navbar = () => {
                     {Nav}
                 </div>
                 <div className="navbar-end">
-                    <div className="flex-none gap-2">
-                        <div className="dropdown flex justify-center dropdown-end">
+                    <div className="flex justify-center items-center gap-x-2 md:gap-x-5">
+                        {user ?
+                            <div>
+                                <Link to="dashboard/mycart">
+                                    <div className="flex justify-center items-center md:gap-1 rounded-full">
+                                        <h1><FaShoppingCart className='text-purple-600 ' /></h1>
+                                        <div className="badge badge-accent"><span className="font-bold">{cart?.length || 0}</span></div>
+                                    </div>
+                                </Link>
+                            </div> 
+                            : 
+                            <></>
+
+                        }
+                        <div className="dropdown flex justify-center dropdown-end pr-2 md:pr-5">
                             {user ?
                                 <div>
                                     <label className="">
@@ -71,7 +85,7 @@ const Navbar = () => {
                                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                         <li>
                                             <a className="justify-between hover:bg-white  hover:duration-1000 hover:text-black">
-                                                {user.displayName}
+                                                <Link to="/dashboard">{user.displayName}</Link>
                                             </a>
                                         </li>
                                         <li><button onClick={handleLogOut} className="hover:bg-white  hover:duration-1000 hover:text-black">Logout</button></li>
