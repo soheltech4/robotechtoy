@@ -18,7 +18,7 @@ const Button = ({ title, toy, link }) => {
         // console.log(user, toy)
         if (user) {
             const toyItem = {toyId: _id, name, price, image, description, rating, category, email: user?.email }
-            fetch('http://localhost:5000/carts', {
+            fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/carts', {
                 method :'POST',
                 headers : {
                     'content-type' : 'application/json'

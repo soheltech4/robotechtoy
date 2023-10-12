@@ -25,7 +25,7 @@ const Signup = () => {
             .then(result => {
                 const logeduser = result.user
                 const saveUser = {name : logeduser?.name, email: logeduser?.email}
-                fetch('http://localhost:5000/users', {
+                fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
@@ -55,7 +55,7 @@ const Signup = () => {
                 const user = result.user
                 console.log(user)
                 const saveUser = {name : user?.displayName, email: user?.email}
-                fetch('http://localhost:5000/users', {
+                fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
