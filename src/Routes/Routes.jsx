@@ -10,6 +10,8 @@ import ToyDetails from "../Pages/Toy Details/ToyDetails";
 import Dashboard from "../Layouts/Dashboard";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
+import AddToy from "../Pages/Dashboard/AddToy/AddToy";
+import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 
 export const router = createBrowserRouter([
   {
@@ -44,8 +46,16 @@ export const router = createBrowserRouter([
     element: <PrivateRoute><Dashboard /></PrivateRoute>,
     children: [
       {
+        path: "myprofile",
+        element: <MyProfile/>
+      },
+      {
         path: "mycart",
         element: <MyCart/>
+      },
+      {
+        path: "addtoy",
+        element: <AddToy/>
       }
     ]
   }
