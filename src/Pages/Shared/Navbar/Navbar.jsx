@@ -85,7 +85,7 @@ const Navbar = () => {
                                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                         <li>
                                             <a className="justify-between hover:bg-white  hover:duration-1000 hover:text-black">
-                                                <Link to="/dashboard">{user.displayName}</Link>
+                                                <Link to="/dashboard">{user?.displayName}</Link>
                                             </a>
                                         </li>
                                         <li><button onClick={handleLogOut} className="hover:bg-white  hover:duration-1000 hover:text-black">Logout</button></li>

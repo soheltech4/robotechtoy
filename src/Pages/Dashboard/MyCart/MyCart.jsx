@@ -46,9 +46,9 @@ const MyCart = () => {
 
 
     return (
-        <div className='w-full h-full p-10 '>
-            <div className='relative flex justify-evenly lg:flex-row-reverse gap-x-24 rounded-md  px-10 '>
-                <div className='bg-gray-500 bg-opacity-25 w-1/3 h-2/3   rounded-lg p-5'>
+        <div className='w-full h-full p-10 text-lg'>
+            <div className='relative md:flex justify-evenly lg:flex-row-reverse gap-x-24 rounded-md  px-10 '>
+                <div className='bg-gray-500 bg-opacity-25 w-full md:w-1/3 md: h-2/3 rounded-lg p-5'>
                     <div className=''>
                         <h1 className='text-lg font-bold text-center'>Order Summary</h1>
                         <div className="divider"></div>
@@ -83,19 +83,19 @@ const MyCart = () => {
                         </div>
                     </div>
                 </div>
-                <div className="overflow-x-auto bg-gray-500 bg-opacity-25 w-full rounded-lg">
-                    <table className="table">
+                <div className="overflow-x-auto  bg-gray-500 bg-opacity-25 w-full rounded-lg">
+                    <table className="table tex- ">
                         <thead>
-                            <tr className='text-center'>
+                            <tr className='text-center text-lg text-white'>
                                 <th>#</th>
                                 <th>Product Image</th>
-                                <th>Toy Name</th>
+                                <th >Toy Name</th>
                                 <th>Catergory</th>
                                 <th>Price</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody className='text-center'>
+                        <tbody className='text-center text-lg'>
                             {
                                 cart.map((toy, index) =>
                                     <tr key={toy?._id}>
@@ -106,7 +106,7 @@ const MyCart = () => {
                                             <Link to={`/toydetails/${toy?.toyId}`}>
                                                 <div className="avatar">
                                                     <div className="mask mask-square w-12 h-12">
-                                                        <img src={toy?.image} alt="Avatar Tailwind CSS Component" />
+                                                        <img  src={toy?.image} className='' alt="Avatar Tailwind CSS Component" />
                                                     </div>
                                                 </div>
                                             </Link>

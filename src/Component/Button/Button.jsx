@@ -11,12 +11,11 @@ const Button = ({ title, toy, link }) => {
     const { user } = useContext(AuthContext)
     const [cart, refetch] = useCart()
     const navigate = useNavigate()
-
-
+    const location = useLocation()
 
 
     const handleAddProduct = toy => {
-        console.log(user, toy)
+        // console.log(user, toy)
         if (user) {
             const toyItem = {toyId: _id, name, price, image, description, rating, category, email: user?.email }
             fetch('http://localhost:5000/carts', {
