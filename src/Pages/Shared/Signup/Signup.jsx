@@ -10,6 +10,7 @@ const Signup = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
+
     const from = location.state?.from?.pathname || "/"
 
     const handleSignup = event => {
@@ -23,16 +24,28 @@ const Signup = () => {
         createUser(email, password)
             .then(result => {
                 const logeduser = result.user
-                console.log(logeduser)
-                reset()
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Signup Successfully',
-                    showConfirmButton: false,
-                    timer: 1500
+                const saveUser = {name : logeduser?.name, email: logeduser?.email}
+                fetch('http://localhost:5000/users', {
+                    method : "POST",
+                    headers : {
+                        'content-type' : 'application/json'
+                    },
+                    body : JSON.stringify(saveUser)
                 })
-                navigate(from, {replace: true})
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Signup Successfully',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                            navigate(from, { replace: true })
+                        }
+                    })
+
             })
     }
 
@@ -41,14 +54,25 @@ const Signup = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Login Successfully',
-                    showConfirmButton: false,
-                    timer: 1500
+                const saveUser = {name : user?.displayName, email: user?.email}
+                fetch('http://localhost:5000/users', {
+                    method : "POST",
+                    headers : {
+                        'content-type' : 'application/json'
+                    },
+                    body : JSON.stringify(saveUser)
                 })
-                navigate(from, {replace: true})
+                .then(res => res.json())
+                .then(() => {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Signup Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    navigate(from, { replace: true })
+                })
             })
             .catch(error => {
                 console.log("error", error.message)
