@@ -24,7 +24,7 @@ const Gallery = () => {
 
     const onBeforeSlide = (detail) => {
         const { index, prevIndex } = detail;
-        console.log(index, prevIndex);
+        // console.log(index, prevIndex);
     };
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Gallery = () => {
                 onBeforeSlide={onBeforeSlide}
             >
                 {
-                    images.map(image => <a href={image?.image}>
+                    images.map((image, indexOf) => <a key={indexOf} href={image?.image}>
                         <div className="max-w-xs overflow-hidden bg-cover bg-no-repeat">
                             <img src={image?.image}
                                 className="max-w-xs transition duration-500 ease-in-out hover:scale-110"

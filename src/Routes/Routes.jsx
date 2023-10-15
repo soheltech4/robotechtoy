@@ -12,6 +12,9 @@ import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import AddToy from "../Pages/Dashboard/AddToy/AddToy";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
+import MyToy from "../Pages/Dashboard/MyToy/MyToy";
+import Contact from "../Pages/Contact/Contact";
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -35,9 +38,17 @@ export const router = createBrowserRouter([
         element: <AllToys></AllToys>
       },
       {
+        path: '/contact',
+        element: <Contact></Contact>
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>
+      },
+      {
         path: '/toydetails/:_id',
         element: <ToyDetails></ToyDetails>,
-        loader: ({ params }) => fetch(`https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/products/${params._id}`)
+        loader: ({ params }) => fetch(`https://robotechtoy-server.up.railway.app/products/${params._id}`)
       }
     ]
   },
@@ -56,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "addtoy",
         element: <AddToy/>
+      },
+      {
+        path: "mytoy",
+        element: <MyToy/>
       }
     ]
   }

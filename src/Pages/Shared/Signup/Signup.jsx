@@ -25,7 +25,7 @@ const Signup = () => {
             .then(result => {
                 const logeduser = result.user
                 const saveUser = {name : logeduser?.name, email: logeduser?.email}
-                fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/users', {
+                fetch('https://robotechtoy-server.up.railway.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
@@ -53,9 +53,9 @@ const Signup = () => {
         signwithGoogle()
             .then(result => {
                 const user = result.user
-                console.log(user)
+                // console.log(user)
                 const saveUser = {name : user?.displayName, email: user?.email}
-                fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/users', {
+                fetch('https://robotechtoy-server.up.railway.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
@@ -90,11 +90,11 @@ const Signup = () => {
                         <div className='pt-10'>
                             <button onClick={handleGoogleSignin} className='text-center w-full hover:bg-black hover:border-teal-200 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Google </h1>
-                                <a><FaGoogle /></a>
+                                <a href=''><FaGoogle /></a>
                             </button>
                             <button className='text-center w-full hover:bg-black hover:border-teal-200 mt-5 justify-center input flex items-center gap-5 '>
                                 <h1>Sign in with Github </h1>
-                                <a><FaGithub /></a>
+                                <a href=''><FaGithub /></a>
                             </button>
                         </div>
 

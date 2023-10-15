@@ -5,8 +5,8 @@ import StarRatings from 'react-star-ratings';
 
 const ToyDetails = () => {
 
-    const toy = useLoaderData()
-    console.log(toy)
+    const toy = useLoaderData([])
+
 
     return (
         <div className='md:p-20 p-10 pt-20 rounded-lg '>

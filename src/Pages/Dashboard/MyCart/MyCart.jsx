@@ -12,6 +12,8 @@ const MyCart = () => {
     const ProductPrice = cart.reduce((sum, item) => item.price + sum, 0)
     const total = cart.reduce((sum, item) => item.price + sum + fee, 0)
 
+    console.log(cart)
+
     const handleDelete = toy => {      
         Swal.fire({
             title: 'Are you sure?',
@@ -23,7 +25,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/carts/${toy?._id}`, {
+                fetch(`https://robotechtoy-server.up.railway.app/carts/${toy?._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -36,7 +38,6 @@ const MyCart = () => {
                                 'success'
                             )
                         }
-
                     })
 
             }

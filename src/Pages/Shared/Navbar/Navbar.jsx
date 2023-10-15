@@ -28,11 +28,9 @@ const Navbar = () => {
     const Nav =
         <>
             <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>Home</Link>
-
             <Link to="/alltoys" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/alltoys' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>All Toys</Link>
-
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Blogs</Link></a>
-            <a className='px-3 hover:bg-white rounded-md hover:duration-1000 hover:text-black'><Link>Contact</Link></a>
+            <Link to="/blogs" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/blogs' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>Blogs</Link>
+            <Link to="/contact" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/contact' ? 'active-link bg-white bg-opacity-80 text-black' : ''}`}>Contact</Link>
         </>
 
     return (
@@ -84,7 +82,7 @@ const Navbar = () => {
                                     </label>
                                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                         <li>
-                                            <a className="justify-between hover:bg-white  hover:duration-1000 hover:text-black">
+                                            <a href='' className="justify-between hover:bg-white  hover:duration-1000 hover:text-black">
                                                 <Link to="/dashboard">{user?.displayName}</Link>
                                             </a>
                                         </li>
@@ -94,7 +92,7 @@ const Navbar = () => {
                                 :
                                 <label className="pl-16">
                                     <div className="">
-                                        <Link to={"/login"}><a title='Login' className="hover:bg-white hover:duration-1000 hover:text-black">
+                                        <Link to={"/login"}><a href='' title='Login' className="hover:bg-white hover:duration-1000 hover:text-black">
                                             <FaUserCircle size={30} /></a></Link>
                                     </div>
                                 </label>

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Categories = () => {
     const [products, setProducts] = useState([]);
-    const [categories, setCategories] = useState('Educational'); // Initialize with an empty string
+    const [categories, setCategories] = useState('Racing'); // Initialize with an empty string
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/products')
+        fetch('https://robotechtoy-server.up.railway.app/products')
             .then((data) => data.json())
             .then((data) => {
                 const uniqueCategories = Array.from(
@@ -31,21 +31,17 @@ const Categories = () => {
             // If "All categories" is selected, show all products
             setFilteredProducts(products);
         } else {
-            fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/products')
+            fetch('https://robotechtoy-server.up.railway.app/products')
                 .then((data) => data.json())
                 .then((data) => {
                     const filtered = data.filter((item) => item.category === categories);
                     setFilteredProducts(filtered);
-                });
+                }
+                );
         }
+        
     }, [categories, products]);
 
-    // const handleSingleData = (id) => {
-    //     if (categories.filter(toy => toy? ._id === id)) {
-    //         console.log("hiii")
-    //     }
-
-    // }
 
 
     return (
@@ -61,11 +57,11 @@ const Categories = () => {
                         ))}
                     </select>
                     <div className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
-                        {filteredProducts.map((product, index) => (
-                            <div key={index} className="card w-96 glass">
+                        {filteredProducts.map((product, indexOf) => ( 
+                            <div key={indexOf} className="card w-96 glass">
                                 <div className="card w-96 glass">
                                     <Link to={`/toydetails/${product?._id}`}>
-                                        <figure><img src={product?.image} className='rounded-t-xl' alt="car!" /></figure>
+                                        <figure><img src={product?.image} className='rounded-t-xl w-96 h-56' alt="car!" /></figure>
                                         <div className="p-5">
                                             <div className='flex justify-between'>
                                                 <h2 className="card-title">{product?.name}</h2>

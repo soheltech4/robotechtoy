@@ -2,16 +2,16 @@ import { useQuery } from '@tanstack/react-query'
 import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 
-const useCart = () => {
+const useToys = () => {
     const { user } = useContext(AuthContext)
-    const { refetch, data : cart = []} = useQuery({
+    const { refetch, data: Toys = [] } = useQuery({
         queryKey: ['carts', user?.email],
-        queryFn: async () =>{
-            const res = await fetch(`https://robotechtoy-server.up.railway.app/carts?email=${user?.email}`)
+        queryFn: async () => {
+            const res = await fetch(`https://robotechtoy-server.up.railway.app/products?email=${user?.email}`)
             return res.json()
         },
     })
-    return [cart, refetch]
+    return [Toys, refetch]
 };
 
-export default useCart;
+export default useToys;

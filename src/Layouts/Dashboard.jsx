@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaBars, FaBox, FaHome, FaLocationArrow, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaBars, FaBox, FaHome, FaLayerGroup, FaLocationArrow, FaShoppingCart, FaUser } from 'react-icons/fa';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import useCart from '../Hooks/useCart';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -54,6 +54,13 @@ const Dashboard = () => {
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
                             ${location.pathname === '/dashboard/addtoy' ? 'active-link bg-white bg-opacity-30' : ''}`}>
                                 <FaBox className='text-purple-600' />Add Toy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="mytoy"
+                                className={`px-3 bg-opacity-20 rounded hover:duration-1000 
+                            ${location.pathname === '/dashboard/mytoy' ? 'active-link bg-white bg-opacity-30' : ''}`}>
+                                <FaLayerGroup className='text-purple-600' />My Toy
                             </Link>
                         </li>
                     </div>

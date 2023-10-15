@@ -10,7 +10,7 @@ const Toy = ({ toy }) => {
         <div>
             <div className="card w-96 glass">
                 <Link to={`/toydetails/${_id}`}>
-                    <figure><img src={image} className='rounded-t-xl' alt="car!" /></figure>
+                    <figure><img src={image} className='rounded-t-xl w-96 h-56' alt="car!" /></figure>
                     <div className="p-5">
                         <div className='flex justify-between'>
                             <h2 className="card-title">{name}</h2>

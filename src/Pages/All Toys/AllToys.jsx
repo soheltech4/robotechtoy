@@ -5,10 +5,12 @@ const AllToys = () => {
     const [Toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch('https://robotechtoy-server-dq64xfm55-sohelranagtc.vercel.app/products')
+        fetch('https://robotechtoy-server.up.railway.app/products')
             .then(data => data.json())
             .then(data => setToys(data))
     }, [])
+
+    console.log(Toys)
 
     return (
         <div className='pt-20 px-5 md:flex justify-center gap-16'>
