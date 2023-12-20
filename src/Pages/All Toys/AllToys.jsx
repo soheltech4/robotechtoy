@@ -5,7 +5,7 @@ const AllToys = () => {
     const [Toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch('https://robotechtoy-server.up.railway.app/products')
+        fetch('https://robotechtoy-server.vercel.app/products')
             .then(data => data.json())
             .then(data => setToys(data))
     }, [])

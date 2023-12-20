@@ -7,7 +7,7 @@ const useToys = () => {
     const { refetch, data: Toys = [] } = useQuery({
         queryKey: ['carts', user?.email],
         queryFn: async () => {
-            const res = await fetch(`https://robotechtoy-server.up.railway.app/products?email=${user?.email}`)
+            const res = await fetch(`https://robotechtoy-server.vercel.app/products?email=${user?.email}`)
             return res.json()
         },
     })

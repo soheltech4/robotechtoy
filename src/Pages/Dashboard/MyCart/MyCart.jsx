@@ -25,7 +25,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://robotechtoy-server.up.railway.app/carts/${toy?._id}`, {
+                fetch(`https://robotechtoy-server.vercel.app/carts/${toy?._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

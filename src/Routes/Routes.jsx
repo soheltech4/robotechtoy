@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
       {
         path: '/toydetails/:_id',
         element: <ToyDetails></ToyDetails>,
-        loader: ({ params }) => fetch(`https://robotechtoy-server.up.railway.app/products/${params._id}`)
+        loader: ({ params }) => fetch(`https://robotechtoy-server.vercel.app/products/${params._id}`)
       }
     ]
   },

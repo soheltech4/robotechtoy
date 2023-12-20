@@ -28,7 +28,7 @@ const AddToy = () => {
                     const { category, description, email, name, price, rating, userName } = data;
                     const newToy = { category, description, email, name, price: parseFloat(price), rating: parseFloat(rating), userName, image };
                     console.log(newToy);
-                    fetch('https://robotechtoy-server.up.railway.app/products', {
+                    fetch('https://robotechtoy-server.vercel.app/products', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const AddToy = () => {
     };
 
     useEffect(() => {
-        fetch('https://robotechtoy-server.up.railway.app/products')
+        fetch('https://robotechtoy-server.vercel.app/products')
             .then((data) => data.json())
             .then((data) => {
                 const uniqueCategories = Array.from(

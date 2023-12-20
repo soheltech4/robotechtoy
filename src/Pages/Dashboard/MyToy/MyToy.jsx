@@ -14,7 +14,7 @@ const MyToy = () => {
     const [modalToy, setModalToy] = useState([])
 
     useEffect(() => {
-        fetch('https://robotechtoy-server.up.railway.app/products')
+        fetch('https://robotechtoy-server.vercel.app/products')
             .then((res) => res.json())
             .then((data) => {
                 const filtered = data.filter((product) => product.email === user.email);
@@ -33,7 +33,7 @@ const MyToy = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://robotechtoy-server.up.railway.app/products/${toy?._id}`, {
+                fetch(`https://robotechtoy-server.vercel.app/products/${toy?._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

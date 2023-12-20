@@ -10,7 +10,7 @@ const Categories = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://robotechtoy-server.up.railway.app/products')
+        fetch('https://robotechtoy-server.vercel.app/products')
             .then((data) => data.json())
             .then((data) => {
                 const uniqueCategories = Array.from(
@@ -31,7 +31,7 @@ const Categories = () => {
             // If "All categories" is selected, show all products
             setFilteredProducts(products);
         } else {
-            fetch('https://robotechtoy-server.up.railway.app/products')
+            fetch('https://robotechtoy-server.vercel.app/products')
                 .then((data) => data.json())
                 .then((data) => {
                     const filtered = data.filter((item) => item.category === categories);

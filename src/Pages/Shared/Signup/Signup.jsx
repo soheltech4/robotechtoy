@@ -25,7 +25,7 @@ const Signup = () => {
             .then(result => {
                 const logeduser = result.user
                 const saveUser = {name : logeduser?.name, email: logeduser?.email}
-                fetch('https://robotechtoy-server.up.railway.app/users', {
+                fetch('https://robotechtoy-server.vercel.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
@@ -55,7 +55,7 @@ const Signup = () => {
                 const user = result.user
                 // console.log(user)
                 const saveUser = {name : user?.displayName, email: user?.email}
-                fetch('https://robotechtoy-server.up.railway.app/users', {
+                fetch('https://robotechtoy-server.vercel.app/users', {
                     method : "POST",
                     headers : {
                         'content-type' : 'application/json'
