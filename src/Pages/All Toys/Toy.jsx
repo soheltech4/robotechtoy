@@ -8,7 +8,7 @@ const Toy = ({ toy }) => {
 
     return (
         <div>
-            <div className="card w-96 glass">
+            <div className="card container mx-auto w-96 glass">
                 <Link to={`/toydetails/${_id}`}>
                     <figure><img src={image} className='rounded-t-xl w-96 h-56' alt="car!" /></figure>
                     <div className="p-5">

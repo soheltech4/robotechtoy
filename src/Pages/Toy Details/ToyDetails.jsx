@@ -9,8 +9,8 @@ const ToyDetails = () => {
 
 
     return (
-        <div className='md:p-20 p-10 pt-20 rounded-lg '>
-            <div className="bg-gray-500  bg-opacity-25 p-10 md:p-20 rounded-lg">
+        <div className='md:p-10 p-5 pt-20 rounded-lg '>
+            <div className="bg-gray-500  bg-opacity-25 p-3 md:p-20 rounded-lg">
                 <div className="md:flex md:gap-20 md:flex-col lg:flex-row">
                     <img src={toy?.image} className="md:w-1/2 rounded-lg shadow-2xl" />
                     <div className='md:w-1/2'>

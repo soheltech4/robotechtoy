@@ -13,7 +13,7 @@ const AllToys = () => {
     console.log(Toys)
 
     return (
-        <div className='pt-20 px-5 md:flex justify-center gap-16'>
+        <div className='pt-20 md:flex justify-center gap-16'>
             <div className='grid md:grid-cols-3 gap-5 items-center'>
                 {
                     Toys.map(toy => <Toy key={toy?._id} toy={toy}></Toy>)
